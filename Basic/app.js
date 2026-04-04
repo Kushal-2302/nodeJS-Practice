@@ -109,29 +109,29 @@
 
 
 //?
-// let task1 = (cb1) => {
-//     setTimeout(()=>{
-//         console.log("Task 1");
-//         cb1()
-//     },2000)
-// }
-// let task2 = (cb2) => {
-//     setTimeout(()=>{
-//         console.log("Task 2");
-//         cb2();
-//     },3000)
-// }
-// let task3 = (cb3) => {
-//     setTimeout(()=>{
-//         console.log("Task 3");
-//         cb3();
-//     },1000)
-// }
+let Task1 = (cb1) => {
+    setTimeout(()=>{
+        console.log("Task 1");
+        cb1()
+    },2000)
+}
+let Task2 = (cb2) => {
+    setTimeout(()=>{
+        console.log("Task 2");
+        cb2();
+    },3000)
+}
+let Task3 = (cb3) => {
+    setTimeout(()=>{
+        console.log("Task 3");
+        cb3();
+    },1000)
+}
 
 // //! callback hell
-// task1(()=>{
-//     task2(()=>{
-//         task3(()=>{
+// Task1(()=>{
+//     Task2(()=>{
+//         Task3(()=>{
 //             console.log("All tasks are completed")
 //         });
 //     })
@@ -197,4 +197,4 @@ value1((res1)=>{
 
 
 
-
+                                                                                                                                                                                             
