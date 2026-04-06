@@ -48,6 +48,17 @@
 //! Advance way
 
 
-let {multiplication,division} = require('./programs');
-console.log(multiplication(10,5))
-console.log(division(100,5));
+//? Add N numbers
+
+let {multiplication,division,add, printOnlyEven, printOnlyOdd,sumOfEven, sumOfOdd, 
+    findLargestNum,findSmallestNum, checkPalindrome} = require('./programs');
+// console.log(multiplication(10,5))
+// console.log(division(100,5));
+// console.log(add(2,7,4,9));
+// console.log(printOnlyEven(3,7,4,9,1,8,2,10));
+// console.log(printOnlyOdd(23,67,88,24,64,1,5,9));
+// console.log(sumOfEven(4,8,2,7,1));
+// console.log(sumOfOdd(3,7,5,9,1,4,6,8))
+// console.log(findLargestNum(7,2,9,1,4))
+// console.log(findSmallestNum(7,2,9,1,4))
+console.log(checkPalindrome("madam"))
