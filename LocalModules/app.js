@@ -5,7 +5,7 @@
 
 // let programs = require('./programs');
 
-//todo : 1st way
+// todo : 1st way
 // let res1 =  programs.addition(10, 20);
 // console.log(res1);
 
@@ -51,7 +51,7 @@
 //? Add N numbers
 
 let {multiplication,division,add, printOnlyEven, printOnlyOdd,sumOfEven, sumOfOdd, 
-    findLargestNum,findSmallestNum, checkPalindrome} = require('./programs');
+    findLargestNum,findSmallestNum, checkPalindrome, gcdRecursive} = require('./programs');
 // console.log(multiplication(10,5))
 // console.log(division(100,5));
 // console.log(add(2,7,4,9));
@@ -61,4 +61,5 @@ let {multiplication,division,add, printOnlyEven, printOnlyOdd,sumOfEven, sumOfOd
 // console.log(sumOfOdd(3,7,5,9,1,4,6,8))
 // console.log(findLargestNum(7,2,9,1,4))
 // console.log(findSmallestNum(7,2,9,1,4))
-console.log(checkPalindrome("madam"))
+// console.log(checkPalindrome("madam"))
+console.log(gcdRecursive(48,18))
