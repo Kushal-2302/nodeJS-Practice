@@ -99,15 +99,15 @@
 //     return Math.min(...small);
 // }
 
-// //todo : check palindrome
-// exports.checkPalindrome = (str) => {
-//     let reversed = str.split('').reverse().join('');
-//     if(reversed == str) {
-//         return `It is palindrom`
-//     } else {
-//         return ` It is not palindrom`
-//     }
-// }
+//todo : check palindrome
+exports.checkPalindrome = (str) => {
+    let reversed = str.split('').reverse().join('');
+    if(reversed == str) {
+        return `It is palindrom`
+    } else {
+        return ` It is not palindrom`
+    }
+}
 
 // todo : GCD program
 const gcdRecursive = (a, b) => {
@@ -115,3 +115,18 @@ const gcdRecursive = (a, b) => {
 };
 
 exports.gcdRecursive = gcdRecursive;
+
+
+// todo :  Find duplicate elements
+exports.findDuplicates = (arr) => {
+    return arr.filter((item, index) => arr.indexOf(item) !== index);
+}
+
+
+// todo : find the longest word in a sentence
+exports.findLongestWord = (sentence) => {
+    return sentence.split(" ").reduce((longest, word) => {
+        return word.length > longest.length ? word : longest
+    },"") 
+    
+}
