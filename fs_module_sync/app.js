@@ -103,7 +103,62 @@ const fs = require('fs')
 // console.log("Love Story folder is deleted")
 
 
+//! Task 4 : Nested files
+// fs.mkdirSync('Course')
+// console.log("Course Folder is created");
 
+// fs.writeFileSync('Course/Course1.txt', "All Courses")
+// console.log("Course1 file is created")
+// let data1 = fs.readFileSync('Course/Course1.txt')
+// console.log("Course1 data is readed")
+
+// fs.mkdirSync('Course/MERN_FULLSTACK');
+// console.log("Mern stack folder is created")
+
+// fs.writeFileSync('Course/MERN_FULLSTACK/JavaScript.txt', "JavaScript")
+// console.log("javascript file is created");
+
+// let data2 = fs.readFileSync('Course/MERN_FULLSTACK/JavaScript.txt')
+// console.log("javascript data is readed")
+
+// fs.writeFileSync('Course/MERN_FULLSTACK/ReactJS.txt', "ReactJS")
+// console.log("react file is created");
+
+// let data3 = fs.readFileSync('Course/MERN_FULLSTACK/ReactJS.txt')
+// console.log("react data is readed")
+
+// fs.writeFileSync('Course/MERN_FULLSTACK/NodeJS.txt', "NodeJS")
+// console.log("node file is created");
+
+// let data4 = fs.readFileSync('Course/MERN_FULLSTACK/NodeJS.txt')
+// console.log("node data is readed")
+
+// fs.writeFileSync('Course/MERN_FULLSTACK/All.txt', "ALL")
+// console.log("All file is created");
+
+// fs.writeFileSync('Course/MERN_FULLSTACK/All.txt', `${data1}, ${data2}, ${data3}, ${data4}`)
+// console.log("All files data is readed");
+
+//* Deleting Course file
+// fs.unlinkSync('Course/MERN_FULLSTACK/All.txt')
+// console.log("All named file is deleted");
+
+// fs.unlinkSync('Course/MERN_FULLSTACK/NodeJS.txt')
+// console.log("Node file is deleted")
+
+// fs.unlinkSync('Course/MERN_FULLSTACK/ReactJS.txt')
+// console.log("react file is deleted")
+
+// fs.unlinkSync('Course/MERN_FULLSTACK/JavaScript.txt')
+// console.log("Javascrit file is deleted")
+
+// fs.rmdirSync('Course/MERN_FULLSTACK');
+// console.log("MERN stack full is deleted")
+
+// fs.unlinkSync('Course/Course1.txt')
+// console.log("Course1 folder is deleted")
+// fs.rmdirSync('Course')
+// console.log('Course folder is deleter')
 
 
 
