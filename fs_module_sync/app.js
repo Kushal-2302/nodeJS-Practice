@@ -6,6 +6,15 @@
 
 const fs = require('fs')
 
+//todo : fs modules methods with synchronous
+// fs.writeFileSync()
+// fs.appendFileSync()
+// fs.readFileSync()
+// fs.unlinkSync()
+// fs.renameSync()
+// fs.mkdirSync()
+// fs.rmdirSync()
+
 //* : writeFileSync -> method is used to creating the file and adding the data
 //? syntax : fs.writeFileSync(filePath, data)
 // fs.writeFileSync("Text.txt", "Welcome ");
@@ -140,25 +149,25 @@ const fs = require('fs')
 // console.log("All files data is readed");
 
 //* Deleting Course file
-// fs.unlinkSync('Course/MERN_FULLSTACK/All.txt')
-// console.log("All named file is deleted");
+fs.unlinkSync('Course/MERN_FULLSTACK/All.txt')
+console.log("All named file is deleted");
 
-// fs.unlinkSync('Course/MERN_FULLSTACK/NodeJS.txt')
-// console.log("Node file is deleted")
+fs.unlinkSync('Course/MERN_FULLSTACK/NodeJS.txt')
+console.log("Node file is deleted")
 
-// fs.unlinkSync('Course/MERN_FULLSTACK/ReactJS.txt')
-// console.log("react file is deleted")
+fs.unlinkSync('Course/MERN_FULLSTACK/ReactJS.txt')
+console.log("react file is deleted")
 
-// fs.unlinkSync('Course/MERN_FULLSTACK/JavaScript.txt')
-// console.log("Javascrit file is deleted")
+fs.unlinkSync('Course/MERN_FULLSTACK/JavaScript.txt')
+console.log("Javascrit file is deleted")
 
-// fs.rmdirSync('Course/MERN_FULLSTACK');
-// console.log("MERN stack full is deleted")
+fs.rmdirSync('Course/MERN_FULLSTACK');
+console.log("MERN stack full is deleted")
 
-// fs.unlinkSync('Course/Course1.txt')
-// console.log("Course1 folder is deleted")
-// fs.rmdirSync('Course')
-// console.log('Course folder is deleter')
+fs.unlinkSync('Course/Course1.txt')
+console.log("Course1 folder is deleted")
+fs.rmdirSync('Course')
+console.log('Course folder is deleter')
 
 
 
