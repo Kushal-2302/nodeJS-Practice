@@ -65,7 +65,6 @@ const fs = require("fs");
 //     })
 // })
 
-
 //! Task1
 //? Create App folder with client , server and app files
 // fs.mkdir("App", (err) => {
@@ -103,13 +102,132 @@ const fs = require("fs");
 //             if(err)throw err;
 //             fs.rmdir('App',(err)=>{
 //                 if(err) throw err;
-                
+
 //             })
 //         })
 //     })
 // })
 
-
 //! Task 2
 //? creating App folder with 2 subfolders that is client and server and app file
+// fs.mkdir("Demo_Folder", (err) => {
+//   if (err) throw err;
+//   console.log("Demo folder is created");
 
+//   // create client folder
+//   fs.mkdir("Demo_Folder/Client", (err) => {
+//     if (err) throw err;
+//     console.log("Client folder is created");
+
+//     fs.writeFile(
+//       "Demo_Folder/Client/client.txt",
+//       "This is client file",
+//       (err) => {
+//         if (err) throw err;
+//         console.log("client file is created");
+//       },
+//     );
+//   });
+//   fs.mkdir("Demo_Folder/Server", (err) => {
+//     if (err) throw err;
+//     console.log("server folder is created");
+
+//     fs.writeFile(
+//       "Demo_Folder/Server/server.txt",
+//       "This is client file",
+//       (err) => {
+//         if (err) throw err;
+//         console.log("client file is created");
+//       },
+//     );
+//   });
+//   fs.readFile("Demo_Folder/Client/client.txt", "utf-8", (err, clientdata) => {
+//     if (err) throw err;
+//     console.log("Data is readed from client file");
+
+//     fs.readFile("Demo_Folder/Server/server.txt", "utf-8", (err, serverdata) => {
+//       if (err) throw err;
+//       console.log("Data is readed from server file");
+
+//       fs.writeFile(
+//         "Demo_Folder/app.txt",
+//         `${clientdata}  ${serverdata}`,
+//         (err) => {
+//           if (err) throw err;
+//           console.log(
+//             "app file is created & data is readed from client and server files",
+//           );
+//         },
+//       );
+//     });
+//   });
+// });
+
+fs.mkdir("Demo_Folder", (err) => {
+  if (err) throw err;
+  console.log("Demo folder is created");
+
+  // Create Client folder
+  fs.mkdir("Demo_Folder/Client", (err) => {
+    if (err) throw err;
+    console.log("Client folder is created");
+
+    // Create client file
+    fs.writeFile(
+      "Demo_Folder/Client/client.txt",
+      "This is client file",
+      (err) => {
+        if (err) throw err;
+        console.log("Client file is created");
+
+        // Create Server folder
+        fs.mkdir("Demo_Folder/Server", (err) => {
+          if (err) throw err;
+          console.log("Server folder is created");
+
+          // Create server file
+          fs.writeFile(
+            "Demo_Folder/Server/server.txt",
+            "This is server file",
+            (err) => {
+              if (err) throw err;
+              console.log("Server file is created");
+
+              // Read client file
+              fs.readFile(
+                "Demo_Folder/Client/client.txt",
+                "utf-8",
+                (err, clientData) => {
+                  if (err) throw err;
+                  console.log("Data is read from client file");
+
+                  // Read server file
+                  fs.readFile(
+                    "Demo_Folder/Server/server.txt",
+                    "utf-8",
+                    (err, serverData) => {
+                      if (err) throw err;
+                      console.log("Data is read from server file");
+
+                      // Write combined data
+                      fs.writeFile(
+                        "Demo_Folder/app.txt",
+                        `${clientData} ${serverData}`,
+                        (err) => {
+                          if (err) throw err;
+                          console.log(
+                            "App file created with client and server data",
+                          );
+                        },
+                      );
+                    },
+                  );
+                },
+              );
+            },
+          );
+        });
+      },
+    );
+  });
+});
