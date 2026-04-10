@@ -1,4 +1,4 @@
-//!
+//! File system modules using Promises .then .catch & .finally method
 
 let fs = require("fs").promises;
 
@@ -94,26 +94,31 @@ fs.mkdir("Application")
         fs.writeFile("Application/Server/server.txt", "This server file")
           .then(() => {
             console.log("Server file is created & data is added");
+
+            fs.readFile("Application/Client/client.txt", "utf-8")
+              .then((clientdata) => {
+                console.log("Client data is read");
+
+                fs.readFile("Application/Server/server.txt", "utf-8")
+                  .then((serverdata) => {
+                    console.log("Server data is read");
+
+                    fs.writeFile(
+                      "Application/app.txt",
+                      `${clientdata} ${serverdata}`,
+                    )
+                      .then((data) => console.log(data))
+                      .catch((err) => console.log("App file is not created"))
+                      .finally(() =>
+                        console.log("Application folder Task is Completed"),
+                      );
+                  })
+                  .catch((err) => console.log("Server data is not read"));
+              })
+              .catch((err) => console.log("Client data is not read"));
           })
           .catch((err) => console.log("server file is not created"));
       })
       .catch((err) => console.log("Server folder is not created"));
-
-    fs.readFile("Application/Client/client.txt", "utf-8")
-      .then((clientdata) => {
-        console.log("Client data is read");
-
-        fs.readFile("Application/Server/server.txt", "utf-8")
-          .then((serverdata) => {
-            console.log("Server data is read");
-
-            fs.writeFile("Application/app.txt", `${clientdata} ${serverdata}`)
-              .then((data) => console.log(data))
-              .catch((err) => console.log("App file is not created"))
-              .finally(() => console.log("Application folder is not created"));
-          })
-          .catch((err) => console.log("Server data is not read"));
-      })
-      .catch((err) => console.log("Client data is not read"));
   })
   .catch((err) => console.log("Application Folder is not created"));
