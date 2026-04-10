@@ -107,11 +107,21 @@ fs.mkdir("Application")
                       "Application/app.txt",
                       `${clientdata} ${serverdata}`,
                     )
-                      .then((data) => console.log(data))
-                      .catch((err) => console.log("App file is not created"))
-                      .finally(() =>
-                        console.log("Application folder Task is Completed"),
-                      );
+                      .then(() => {
+                        console.log(
+                          "Client and server data is copies to the app.txt file",
+                        );
+
+                        fs.readFile("Application/app.txt", "utf-8")
+                          .then((data) => console.log(data))
+                          .catch((err) =>
+                            console.log("Data is not printed in the terminal"),
+                          )
+                          .finally(() =>
+                            console.log("Application folder Task is Completed"),
+                          );
+                      })
+                      .catch((err) => console.log("App file is not created"));
                   })
                   .catch((err) => console.log("Server data is not read"));
               })
