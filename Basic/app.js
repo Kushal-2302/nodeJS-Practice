@@ -6,7 +6,7 @@
 
 
 // //? callback (CBF) and higherorder(HOF) function
-// //todo : creating to invoking the functionas a argument of another function is called CBF
+// //todo : creating to invoking the functions a argument of another function is called CBF
 // //todo : accepting the CBF as a parameter that function called as HOF
 // let num = () => {
 //     return 200;
@@ -195,6 +195,4 @@ value1((res1)=>{
 
 
 
-
-
-                                                                                                                                                                                             
+console.log("kushal")    ;                                                                                                                                                                        
