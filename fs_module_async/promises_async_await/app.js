@@ -89,6 +89,9 @@ let task2 = async () => {
         await fs.writeFile('App/Client/frontend.txt','This is frontend file')
         console.log('Frontend file is created and data is added')
 
+        let frontendData = await fs.readFile('App/Client/frontend.txt','utf-8')
+        console.log('FrontendData is readed')
+
         await fs.mkdir('App/Server')
         console.log('Server folder is created')
 
@@ -101,20 +104,23 @@ let task2 = async () => {
         await fs.mkdir('App/Server/Database')
         console.log('Database layer folder is created')
 
-        await fs.writeFile('App/Server/ProgramLayer/DB.txt','This is Database layer file')
+        await fs.writeFile('App/Server/Database/DB.txt','This is Database layer file')
         console.log('Database layer file is created and data is added')
-
-        let frontendData = await fs.readFile('App/Client/frontend.txt','utf-8')
-        console.log('FrontendData is readed')
 
         let plData = await fs.readFile('App/Server/ProgramLayer/PL.txt','utf-8')
         console.log('PL data is readed')
 
-        let dbData = await fs.readFile('App/Server/ProgramLayer/DB.txt','utf-8')
+        let dbData = await fs.readFile('App/Server/Database/DB.txt','utf-8')
         console.log('DB is readed')
 
-        await fs.writeFile('App/app.txt',`${frontendData}, ${plData}, ${dbData}`)
-        console.log("All data is retrived to app file")
+        await fs.writeFile('App/Server/backend.txt',` ${plData}, ${dbData}`)
+        console.log('Backend file is created and data is added from the PL file and DB file')
+
+        let backendData = await fs.readFile('App/Server/backend.txt','utf-8')
+        console.log('backData is readed')
+
+        await fs.writeFile('App/app.txt',`${frontendData}, ${backendData}`)
+        console.log("All data is retrived to app file from frontend file and backend file")
 
         let appData = await fs.readFile('App/app.txt', 'utf-8')
         console.log(appData)
