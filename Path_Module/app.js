@@ -8,7 +8,7 @@ const path = require('path')
 // console.log(path.basename(__dirname))
 // console.log(path.basename(__filename))
 
-// console.log(path.extname(__dirname)) //* It will not print anything because I don't have any extention
+// console.log(path.extname(__dirname)) //* It will not print anything because It don't have any extention
 // console.log(path.extname(__filename))
 
 
