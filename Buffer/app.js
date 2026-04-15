@@ -15,16 +15,16 @@
 // let buf = Buffer.from(text)
 // console.log(buf)
 
-// //todo : It is used to convert buffer data to string
+//todo : It is used to convert buffer data to string
 // console.log(buf.toString())
 
-// //todo : It is used check the length of buffer data
+//todo : It is used check the length of buffer data
 // console.log(buf.length)
 // console.log(buf.toString().length)
 
 // console.log(buf[1]); // 101
 
-// //todo : fromcharCode() -- It is use to check character of ascii value
+//todo : fromcharCode() -- It is use to check character of ascii value
 // console.log(String.fromCharCode(101));// e
 // console.log(String.fromCharCode(buf[1])); //e
 
