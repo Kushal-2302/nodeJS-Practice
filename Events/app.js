@@ -40,7 +40,7 @@ emitter.on('evenOdd',(num)=>{
         console.log('It is Odd')
     }
 })
-emitter.emit('evenOdd',4)
+// emitter.emit('evenOdd',4)
 
 //todo : Program 4
 emitter.on('palindrome',(str)=>{
@@ -59,3 +59,13 @@ emitter.on('findDuplicate',(arr)=>{
     console.log(Duplicate)
 })
 // emitter.emit('findDuplicate',[1,4,2,1,5,2])
+
+//todo : Program 6
+emitter.on('findLongestWord',(sentence)=>{
+    let longestWord = sentence.split(" ").reduce((longest, word) => {
+        return word.length > longest.length ? word : longest;
+        
+    },"")
+    console.log(longestWord);
+})
+emitter.emit('findLongestWord',"My Name is Kushal")
