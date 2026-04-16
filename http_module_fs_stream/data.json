@@ -1,0 +1,17 @@
+[
+    {
+        "fname" : "kushal",
+        "lname" : "kumar",
+        "age" : 24
+    },
+    {
+        "fname" : "rama",
+        "lname" : "raju",
+        "age" : 25
+    },
+    {
+        "fname" : "raja",
+        "lname" : "rumari",
+        "age" : 23
+    }
+]
