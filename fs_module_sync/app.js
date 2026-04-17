@@ -28,7 +28,7 @@ const fs = require('fs')
 
 //* : readFileSync -> method is used to read the data from the another file, but the data will be in the form of buffer data (It reads the data in buffer format), 
 //* : so we have to convert that data to the string using javascript tOString().
-//? syntax : fs.writeFileSync(filePath, data)
+//? syntax : fs.readFileSync(filePath, data)
 // let data = fs.readFileSync('Text.txt')
 // console.log("Data is readed")
 // console.log(data);
@@ -37,7 +37,7 @@ const fs = require('fs')
 //* : utf-8 -> stands for Unicode transformation format with 8 bit.
 //* : It converts character to binary.
 //* : It is used to convert buffer data to the string
-//? syntax : fs.writeFileSync(filePath, utf-8)
+//? syntax : fs.readFileSync(filePath, utf-8)
 // let data = fs.readFileSync('Text.txt', 'utf-8');
 // console.log(data)
 
