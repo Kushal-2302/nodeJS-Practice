@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/design">
+</head>
+<body>
+    <h1>Welcome</h1>
+
+    <div class="container">
+        <form onsubmit="handleForm(event)">
+            <input type="text" placeholder="Enter first name">
+            <input type="text" placeholder="Enter last name">
+
+            <input type="date"> <label for="">Enter Date</label>
+            <input type="text" placeholder="Enter Place">
+
+            <button>Add Data</button>
+        </form>
+    </div>
+
+    <button onclick="printName()">
+        Print Details
+    </button>
+    <div id="detail">
+
+    </div>
+
+
+    <script src="/scriptfile"></script>
+</body>
+</html>
