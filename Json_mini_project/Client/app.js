@@ -1,17 +1,3 @@
-// let handleForm = (e) => {
-//   e.preventDefault();
-//   let fnm = e.target[0].value;
-//   let lnm = e.target[1].value;
-  
-
-//   let user = {
-//     fname: fnm,
-//     lname: lnm
-//   };
-//   let {fname, lname } = user;
-//   console.log(user)
-  
-// };
 
 function handleForm(e) {
   e.preventDefault();
