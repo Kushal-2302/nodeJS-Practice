@@ -32,4 +32,30 @@ function handleForm(e) {
     body: data
   })
   .then(() => alert('Data sent'));
+
+
+}
+
+function printData(e) {
+  e.preventDefault();
+
+  fetch('/jsonfile')
+  .then(res => res.json())
+  .then(data => {
+
+    const tbody = document.getElementById('tableBody');
+
+    data.forEach(user => {
+      const row = `
+        <tr>
+          <td>${user.first}</td>
+          <td>${user.last}</td>
+          <td>${user.dob}</td>
+          <td>${user.place}</td>
+        </tr>
+      `;
+      tbody.innerHTML += row;
+    });
+
+  });
 }

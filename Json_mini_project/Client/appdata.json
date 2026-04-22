@@ -6,9 +6,15 @@
     "place": "Bangarpet"
   },
   {
-    "first": "shridhar",
+    "first": "Raj ",
+    "last": "kumar",
+    "dob": "2001-07-25",
+    "place": "Bengaluru"
+  },
+  {
+    "first": "Shridhar",
     "last": "patil",
-    "dob": "2004-07-14",
+    "dob": "2004-07-13",
     "place": "Hubli"
   }
 ]
